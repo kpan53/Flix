@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-QG-8Uo">
-                                <rect key="frame" x="0.0" y="35" width="414" height="861"/>
+                                <rect key="frame" x="0.0" y="79" width="414" height="861"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -28,26 +28,41 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-3n-gnu">
-                                                    <rect key="frame" x="20" y="11" width="128" height="188"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="linkColor"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyz-pC-g9R">
-                                                    <rect key="frame" x="156" y="11" width="238" height="51"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyz-pC-g9R">
+                                                    <rect key="frame" x="175" y="11" width="219" height="29"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKu-VX-CoB">
-                                                    <rect key="frame" x="156" y="70" width="238" height="129"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKu-VX-CoB">
+                                                    <rect key="frame" x="175" y="48" width="219" height="151"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-3n-gnu">
+                                                    <rect key="frame" x="20" y="12" width="147" height="188"/>
+                                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="147" id="ccZ-lg-6Fa"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lKu-VX-CoB" firstAttribute="bottom" secondItem="ZPT-wX-UgK" secondAttribute="bottomMargin" id="9Nk-55-POV"/>
+                                                <constraint firstItem="Kyz-pC-g9R" firstAttribute="trailing" secondItem="ZPT-wX-UgK" secondAttribute="trailingMargin" id="Cj1-c4-2LT"/>
+                                                <constraint firstItem="Kyz-pC-g9R" firstAttribute="leading" secondItem="HLM-3n-gnu" secondAttribute="trailing" constant="8" id="M4o-jR-20V"/>
+                                                <constraint firstAttribute="trailing" secondItem="lKu-VX-CoB" secondAttribute="trailing" constant="20" id="M6e-yc-aTZ"/>
+                                                <constraint firstItem="Kyz-pC-g9R" firstAttribute="top" secondItem="ZPT-wX-UgK" secondAttribute="topMargin" id="MQu-6o-xhJ"/>
+                                                <constraint firstItem="lKu-VX-CoB" firstAttribute="trailing" secondItem="ZPT-wX-UgK" secondAttribute="trailingMargin" id="Nci-Dr-4v0"/>
+                                                <constraint firstAttribute="bottom" secondItem="HLM-3n-gnu" secondAttribute="bottom" constant="10" id="WBi-qt-lw8"/>
+                                                <constraint firstItem="lKu-VX-CoB" firstAttribute="top" secondItem="Kyz-pC-g9R" secondAttribute="bottom" constant="8" id="YNI-3A-SAm"/>
+                                                <constraint firstItem="lKu-VX-CoB" firstAttribute="leading" secondItem="HLM-3n-gnu" secondAttribute="trailing" constant="8" id="b7x-Yp-rE4"/>
+                                                <constraint firstItem="HLM-3n-gnu" firstAttribute="leading" secondItem="ZPT-wX-UgK" secondAttribute="leading" constant="20" id="bdq-zc-8aO"/>
+                                                <constraint firstItem="Kyz-pC-g9R" firstAttribute="top" secondItem="ZPT-wX-UgK" secondAttribute="topMargin" id="kJY-vL-Kpp"/>
+                                                <constraint firstItem="HLM-3n-gnu" firstAttribute="top" secondItem="ZPT-wX-UgK" secondAttribute="top" constant="12" id="mbI-BO-5zt"/>
+                                                <constraint firstItem="lKu-VX-CoB" firstAttribute="top" secondItem="Kyz-pC-g9R" secondAttribute="bottom" constant="8" id="mqZ-Du-Cj7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="posterView" destination="HLM-3n-gnu" id="w0M-0y-WsT"/>
