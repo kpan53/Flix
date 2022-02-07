@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-QG-8Uo">
-                                <rect key="frame" x="0.0" y="79" width="414" height="861"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-QG-8Uo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="210" id="tbs-OA-x2K" customClass="MovieCell" customModule="Tipster" customModuleProvider="target">
@@ -75,6 +74,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wIQ-ZF-C2h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HCt-QG-8Uo" firstAttribute="trailing" secondItem="wIQ-ZF-C2h" secondAttribute="trailing" id="0Lf-0W-f3c"/>
+                            <constraint firstItem="HCt-QG-8Uo" firstAttribute="leading" secondItem="wIQ-ZF-C2h" secondAttribute="leading" id="Ksb-vU-yxB"/>
+                            <constraint firstAttribute="bottom" secondItem="HCt-QG-8Uo" secondAttribute="bottom" id="VpW-c6-q0v"/>
+                            <constraint firstItem="HCt-QG-8Uo" firstAttribute="top" secondItem="e6F-P7-Qkx" secondAttribute="top" id="eWK-mT-3im"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="HrU-fh-hBy"/>
                     <connections>
