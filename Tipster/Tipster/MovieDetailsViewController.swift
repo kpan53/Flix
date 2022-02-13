@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieDetailsViewController: UIViewController {
 
@@ -21,7 +22,11 @@ class MovieDetailsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         titleLabel.text = movie["title"] as? String
+        titleLabel.sizeToFit()
+        
+        
         synopsisLabel.text = movie["overview"] as? String
+        synopsisLabel.sizeToFit()
         //The lcoation that the AI stores the posters
         let rootURL = "https://image.tmdb.org/t/p/w185"
         
