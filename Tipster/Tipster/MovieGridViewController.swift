@@ -27,14 +27,14 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
-        //This controls the space in betwen the rows, so between row 1 and rwo 2 there should be 40 pixels
+        //This controls the space in betwen the rows, so between row 1 and row 2 there should be x amount of pixels
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         
         //Width of the phone, changing variable
 
 
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 2
         layout.itemSize = CGSize(width: width, height: width * 3 / 2)
         
         
@@ -77,14 +77,25 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         return cell
         
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        //Find the selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        
+        //Pass the selcted movie to details view controller 2
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController2
+        detailsViewController.movie = movie
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
-    */
+    
 
 }
